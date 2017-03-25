@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP STM32F030C8
+D TQFP44, 128k Flash, 16k SRAM, 4k EEPROM, JTAG
+K AVR 8bit Microcontroller MegaAVR
+F http://www.atmel.com/Images/Atmel-8272-8-bit-AVR-microcontroller-ATmega164A_PA-324A_PA-644A_PA-1284_P_datasheet.pdf
+$ENDCMP
+#
+#End Doc Library
