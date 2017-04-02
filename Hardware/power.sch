@@ -29,6 +29,8 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
+LIBS:switches
+LIBS:stm32
 LIBS:CentralCommand-cache
 EELAYER 25 0
 EELAYER END

@@ -29,12 +29,14 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
+LIBS:switches
+LIBS:stm32
 LIBS:CentralCommand-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 3
+Sheet 3 3
 Title ""
 Date ""
 Rev ""
@@ -44,4 +46,273 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+$Comp
+L CONN_01X06 P?
+U 1 1 58DF9C44
+P 4515 1295
+F 0 "P?" H 4515 1645 50  0000 C CNN
+F 1 "CONN_01X06" V 4615 1295 50  0000 C CNN
+F 2 "" H 4515 1295 50  0000 C CNN
+F 3 "" H 4515 1295 50  0000 C CNN
+	1    4515 1295
+	1    0    0    -1  
+$EndComp
+$Comp
+L R_Small R?
+U 1 1 58DF9D23
+P 4085 1045
+F 0 "R?" H 4115 1065 50  0000 L CNN
+F 1 "0" H 4115 1005 50  0000 L CNN
+F 2 "" H 4085 1045 50  0000 C CNN
+F 3 "" H 4085 1045 50  0000 C CNN
+F 4 "Value" H 4085 1045 60  0001 C CNN "Fieldname"
+	1    4085 1045
+	0    1    -1   0   
+$EndComp
+Text HLabel 3455 1045 0    60   Input ~ 0
+PWR
+Text Label 3600 1045 0    60   ~ 0
+PWR
+Text HLabel 3455 1145 0    60   Input ~ 0
+SWCLK
+$Comp
+L GND #PWR?
+U 1 1 58DF9E37
+P 2955 1245
+F 0 "#PWR?" H 2955 995 50  0001 C CNN
+F 1 "GND" H 2955 1095 50  0000 C CNN
+F 2 "" H 2955 1245 50  0000 C CNN
+F 3 "" H 2955 1245 50  0000 C CNN
+	1    2955 1245
+	1    0    0    -1  
+$EndComp
+Text HLabel 3455 1345 0    60   Input ~ 0
+SWDIO
+Text HLabel 3455 1445 0    60   Input ~ 0
+NRST
+Text HLabel 3460 1545 0    60   Input ~ 0
+TRACE
+Text Notes 2855 1740 0    60   ~ 0
+NOTE: TRACE is reserved and not connected
+$Comp
+L CONN_01X04 P?
+U 1 1 58E0FECE
+P 7910 1290
+F 0 "P?" H 7910 1540 50  0000 C CNN
+F 1 "GROVE_OUTPUT_2MM" V 8010 1290 50  0000 C CNN
+F 2 "" H 7910 1290 50  0000 C CNN
+F 3 "" H 7910 1290 50  0000 C CNN
+F 4 "Value" H 7910 1290 60  0001 C CNN "Fieldname"
+	1    7910 1290
+	1    0    0    -1  
+$EndComp
+Text HLabel 7125 1240 0    60   Input ~ 0
+PWR
+$Comp
+L GND #PWR?
+U 1 1 58E10BA0
+P 6750 1140
+F 0 "#PWR?" H 6750 890 50  0001 C CNN
+F 1 "GND" H 6750 990 50  0000 C CNN
+F 2 "" H 6750 1140 50  0000 C CNN
+F 3 "" H 6750 1140 50  0000 C CNN
+	1    6750 1140
+	1    0    0    -1  
+$EndComp
+Text HLabel 7125 1340 0    60   Input ~ 0
+SCL
+Text HLabel 7125 1440 0    60   Input ~ 0
+SDA
+$Comp
+L CONN_01X04 P?
+U 1 1 58E10C1E
+P 7910 2220
+F 0 "P?" H 7910 2470 50  0000 C CNN
+F 1 "GROVE_INPUT_2MM" V 8010 2220 50  0000 C CNN
+F 2 "" H 7910 2220 50  0000 C CNN
+F 3 "" H 7910 2220 50  0000 C CNN
+F 4 "Value" H 7910 2220 60  0001 C CNN "Fieldname"
+	1    7910 2220
+	1    0    0    -1  
+$EndComp
+$Comp
+L R_Small R?
+U 1 1 58E10C90
+P 7640 1760
+F 0 "R?" H 7670 1780 50  0000 L CNN
+F 1 "0" H 7615 1765 50  0000 L CNN
+F 2 "" H 7640 1760 50  0000 C CNN
+F 3 "" H 7640 1760 50  0000 C CNN
+F 4 "Value" H 7640 1760 60  0001 C CNN "Fieldname"
+	1    7640 1760
+	1    0    0    -1  
+$EndComp
+$Comp
+L R_Small R?
+U 1 1 58E10CC8
+P 7550 1760
+F 0 "R?" H 7555 1875 50  0000 L CNN
+F 1 "0" H 7530 1760 50  0000 L CNN
+F 2 "" H 7550 1760 50  0000 C CNN
+F 3 "" H 7550 1760 50  0000 C CNN
+F 4 "Value" H 7550 1760 60  0001 C CNN "Fieldname"
+	1    7550 1760
+	1    0    0    -1  
+$EndComp
+$Comp
+L R_Small R?
+U 1 1 58E10CF9
+P 7450 1760
+F 0 "R?" H 7455 1880 50  0000 L CNN
+F 1 "0" H 7430 1760 50  0000 L CNN
+F 2 "" H 7450 1760 50  0000 C CNN
+F 3 "" H 7450 1760 50  0000 C CNN
+F 4 "Value" H 7450 1760 60  0001 C CNN "Fieldname"
+	1    7450 1760
+	1    0    0    -1  
+$EndComp
+$Comp
+L R_Small R?
+U 1 1 58E10D31
+P 7350 1760
+F 0 "R?" H 7200 1795 50  0000 L CNN
+F 1 "0" H 7330 1760 50  0000 L CNN
+F 2 "" H 7350 1760 50  0000 C CNN
+F 3 "" H 7350 1760 50  0000 C CNN
+F 4 "Value" H 7350 1760 60  0001 C CNN "Fieldname"
+	1    7350 1760
+	1    0    0    -1  
+$EndComp
+$Comp
+L SW_Push SW?
+U 1 1 58E13285
+P 5620 3800
+F 0 "SW?" H 5670 3900 50  0000 L CNN
+F 1 "SW_Push" H 5620 3740 50  0000 C CNN
+F 2 "" H 5620 4000 50  0000 C CNN
+F 3 "" H 5620 4000 50  0000 C CNN
+	1    5620 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L CP_Small C?
+U 1 1 58E132D2
+P 5625 4050
+F 0 "C?" H 5635 4120 50  0000 L CNN
+F 1 "CP_Small" H 5635 3970 50  0000 L CNN
+F 2 "" H 5625 4050 50  0000 C CNN
+F 3 "" H 5625 4050 50  0000 C CNN
+	1    5625 4050
+	0    1    1    0   
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 58E1344F
+P 5820 4145
+F 0 "#PWR?" H 5820 3895 50  0001 C CNN
+F 1 "GND" H 5820 3995 50  0000 C CNN
+F 2 "" H 5820 4145 50  0000 C CNN
+F 3 "" H 5820 4145 50  0000 C CNN
+	1    5820 4145
+	1    0    0    -1  
+$EndComp
+Text HLabel 5250 4050 0    60   Input ~ 0
+NRST
+Text Notes 5285 3590 0    60   ~ 0
+RESET BUTTON
+$Comp
+L CONN_01X03 P?
+U 1 1 58E182A5
+P 9270 4480
+F 0 "P?" H 9270 4680 50  0000 C CNN
+F 1 "BOOT" V 9370 4480 50  0000 C CNN
+F 2 "" H 9270 4480 50  0000 C CNN
+F 3 "" H 9270 4480 50  0000 C CNN
+F 4 "Value" H 9270 4480 60  0001 C CNN "Fieldname"
+	1    9270 4480
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4315 1045 4185 1045
+Wire Wire Line
+	3455 1045 3985 1045
+Wire Wire Line
+	2955 1245 4315 1245
+Wire Wire Line
+	3455 1445 4315 1445
+Wire Wire Line
+	3455 1145 4315 1145
+Wire Wire Line
+	4315 1345 3455 1345
+Wire Wire Line
+	4315 1545 3460 1545
+Wire Wire Line
+	6750 1140 7710 1140
+Wire Wire Line
+	7125 1240 7710 1240
+Wire Wire Line
+	7125 1340 7710 1340
+Wire Wire Line
+	7125 1440 7710 1440
+Wire Wire Line
+	7710 2070 7640 2070
+Wire Wire Line
+	7640 2070 7640 1860
+Wire Wire Line
+	7640 1660 7640 1440
+Connection ~ 7640 1440
+Wire Wire Line
+	7550 2170 7710 2170
+Wire Wire Line
+	7550 1860 7550 2170
+Wire Wire Line
+	7550 1660 7550 1340
+Connection ~ 7550 1340
+Wire Wire Line
+	7450 1240 7450 1660
+Wire Wire Line
+	7445 1240 7450 1240
+Wire Wire Line
+	7350 1660 7350 1140
+Connection ~ 7350 1140
+Wire Wire Line
+	7350 1860 7350 2370
+Wire Wire Line
+	7350 2370 7710 2370
+Wire Wire Line
+	7455 2270 7710 2270
+Wire Wire Line
+	7450 1860 7455 2270
+Connection ~ 7450 1240
+Wire Wire Line
+	5420 3800 5420 4050
+Wire Wire Line
+	5250 4050 5525 4050
+Wire Wire Line
+	5820 3800 5820 4145
+Wire Wire Line
+	5820 4050 5725 4050
+Connection ~ 5820 4050
+Connection ~ 5420 4050
+Wire Wire Line
+	9070 4380 8540 4380
+Wire Wire Line
+	9070 4480 8540 4480
+Wire Wire Line
+	9070 4580 8540 4580
+Text Label 8540 4380 0    60   ~ 0
+PWR
+$Comp
+L GND #PWR?
+U 1 1 58E18682
+P 8540 4580
+F 0 "#PWR?" H 8540 4330 50  0001 C CNN
+F 1 "GND" H 8540 4430 50  0000 C CNN
+F 2 "" H 8540 4580 50  0000 C CNN
+F 3 "" H 8540 4580 50  0000 C CNN
+	1    8540 4580
+	1    0    0    -1  
+$EndComp
+Text HLabel 8540 4480 0    60   Input ~ 0
+BOOT0
 $EndSCHEMATC

@@ -29,6 +29,8 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
+LIBS:switches
+LIBS:stm32
 LIBS:CentralCommand-cache
 EELAYER 25 0
 EELAYER END
@@ -45,14 +47,14 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Sheet
-S 9455 5180 1505 1025
+S 7630 3310 1505 1025
 U 58D7AFB1
 F0 "power" 60
 F1 "power.sch" 60
-F2 "PWR" I L 9455 5495 60 
-F3 "NRESET" I L 9455 5320 60 
-F4 "TX" I L 9455 5675 60 
-F5 "RX" I L 9455 5860 60 
+F2 "PWR" I L 7630 3625 60 
+F3 "NRESET" I L 7630 3450 60 
+F4 "TX" I L 7630 3805 60 
+F5 "RX" I L 7630 3990 60 
 $EndSheet
 $Comp
 L C_Small C107
@@ -332,8 +334,8 @@ Connection ~ 1445 1800
 Text Label 1245 1800 0    60   ~ 0
 PWR
 Wire Wire Line
-	9455 5495 8930 5495
-Text Label 8930 5495 0    60   ~ 0
+	7630 3625 7105 3625
+Text Label 7105 3625 0    60   ~ 0
 PWR
 Wire Wire Line
 	3970 3950 4565 3950
@@ -349,11 +351,11 @@ Text Label 4565 3470 2    60   ~ 0
 MCO
 Wire Wire Line
 	3970 2540 4565 2540
-Text Label 4565 2540 2    60   ~ 0
+Text Label 4565 5080 2    60   ~ 0
 I2C1_SCL
 Wire Wire Line
 	3970 2630 4565 2630
-Text Label 4565 2630 2    60   ~ 0
+Text Label 4565 5180 2    60   ~ 0
 I2C1_SDA
 Wire Wire Line
 	1970 2970 1375 2970
@@ -371,14 +373,10 @@ Wire Wire Line
 	3970 4150 4565 4150
 Text Label 4565 4150 2    60   ~ 0
 ADC_IN1
-Wire Wire Line
-	3970 3180 4565 3180
-Text Label 4565 3180 2    60   ~ 0
-I2C_SCL
-Wire Wire Line
-	3970 3080 4565 3080
-Text Label 4565 3080 2    60   ~ 0
-I2C_SDA
+Text Label 4565 2540 2    60   ~ 0
+I2C2_SCL
+Text Label 4565 2630 2    60   ~ 0
+I2C2_SDA
 Wire Wire Line
 	3970 2980 4565 2980
 Text Label 4565 2980 2    60   ~ 0
@@ -413,11 +411,11 @@ Text Label 4565 4980 2    60   ~ 0
 SPI1_MOSI
 Wire Wire Line
 	3970 5080 4565 5080
-Text Label 4565 5080 2    60   ~ 0
+Text Label 4565 3380 2    60   ~ 0
 USART1_TX
 Wire Wire Line
 	3970 5180 4565 5180
-Text Label 4565 5180 2    60   ~ 0
+Text Label 4565 3280 2    60   ~ 0
 USART1_RX
 Text Notes 1285 1185 0    60   ~ 0
 ARM VDD Filtering Requirements: 100nF on each VDD + 4.7uF\nARM VDDA Filtering Requirements: 10nF + 1uF
@@ -553,9 +551,9 @@ Wire Wire Line
 Wire Wire Line
 	10000 3465 10490 3465
 Text Label 10000 3365 0    60   ~ 0
-I2C1_SDA
+I2C2_SDA
 Text Label 10000 3465 0    60   ~ 0
-I2C1_SCL
+I2C2_SCL
 Text Notes 9935 3205 0    60   ~ 0
 SENSOR I2C HEADER
 Wire Notes Line
@@ -567,23 +565,31 @@ Wire Notes Line
 Wire Notes Line
 	10960 3095 9895 3095
 $Sheet
-S 6310 2320 2035 2640
+S 7630 1165 955  1425
 U 58DEA2CA
 F0 "comm" 60
 F1 "comm.sch" 60
+F2 "PWR" I L 7630 1510 60 
+F3 "SWCLK" I L 7630 1645 60 
+F4 "SWDIO" I L 7630 1375 60 
+F5 "NRST" I L 7630 1265 60 
+F6 "TRACE" I L 7630 1770 60 
+F7 "SCL" I L 7630 1895 60 
+F8 "SDA" I L 7630 2025 60 
+F9 "BOOT0" I L 7630 2170 60 
 $EndSheet
 Wire Wire Line
-	8930 5675 9455 5675
+	7105 3805 7630 3805
 Wire Wire Line
-	9455 5860 8935 5860
-Text Label 8930 5675 0    60   ~ 0
+	7630 3990 7110 3990
+Text Label 7105 3805 0    60   ~ 0
 USART2_TX
-Text Label 8935 5860 0    60   ~ 0
+Text Label 7110 3990 0    60   ~ 0
 USART2_RX
-Text Label 8930 5320 0    60   ~ 0
+Text Label 7105 3450 0    60   ~ 0
 NRST
 Wire Wire Line
-	9455 5320 8930 5320
+	7630 3450 7105 3450
 $Comp
 L STM32F030C8 IC101
 U 1 1 58DF544A
@@ -591,8 +597,51 @@ P 2970 4270
 F 0 "IC101" H 2120 6150 50  0000 L BNN
 F 1 "STM32F030C8" H 3370 2320 50  0000 L BNN
 F 2 "LQFP48" H 2970 4270 50  0000 C CIN
-F 3 "" H 2970 4270 50  0000 C CNN
+F 3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/a4/5d/0b/0e/87/c4/4d/71/DM00088500.pdf/files/DM00088500.pdf/jcr:content/translations/en.DM00088500.pdf" H 2970 4270 50  0001 C CNN
+F 4 "Value" H 2970 4270 60  0001 C CNN "Fieldname"
 	1    2970 4270
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	7630 1265 7235 1265
+Wire Wire Line
+	7630 1375 7235 1375
+Wire Wire Line
+	7630 1510 7240 1510
+Wire Wire Line
+	7630 1645 7240 1645
+Wire Wire Line
+	7630 1770 7240 1770
+Wire Wire Line
+	7240 1895 7630 1895
+Wire Wire Line
+	7630 2025 7245 2025
+Text Label 7240 1510 0    60   ~ 0
+PWR
+Text Label 7235 1375 0    60   ~ 0
+SWDIO
+Text Label 7240 1645 0    60   ~ 0
+SWCLK
+Text Label 7245 2025 0    60   ~ 0
+I2C1_SDA
+Text Label 7240 1895 0    60   ~ 0
+I2C1_SCL
+Text Label 7235 1265 0    60   ~ 0
+NRST
+Wire Wire Line
+	7630 2170 7255 2170
+Text Label 7255 2170 0    60   ~ 0
+BOOT0
+Text Notes 4625 5120 0    60   ~ 0
+Note: Change of pins
+Text Notes 4715 2590 0    60   ~ 0
+Note: Change of pins
+Wire Wire Line
+	3970 3280 4565 3280
+Wire Wire Line
+	3970 3380 4565 3380
+Text Notes 4730 3330 0    60   ~ 0
+Note: Change of pins
+Text Notes 4730 3130 0    60   ~ 0
+Note: Change of pins
 $EndSCHEMATC
