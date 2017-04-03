@@ -47,14 +47,14 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Sheet
-S 7630 3310 1505 1025
+S 9495 3555 1505 1025
 U 58D7AFB1
 F0 "power" 60
 F1 "power.sch" 60
-F2 "PWR" I L 7630 3625 60 
-F3 "NRESET" I L 7630 3450 60 
-F4 "TX" I L 7630 3805 60 
-F5 "RX" I L 7630 3990 60 
+F2 "PWR" I L 9495 3870 60 
+F3 "NRESET" I L 9495 3695 60 
+F4 "TX" I L 9495 4050 60 
+F5 "RX" I L 9495 4235 60 
 $EndSheet
 $Comp
 L C_Small C107
@@ -86,9 +86,12 @@ L Crystal_Small Y101
 U 1 1 58D7B7C9
 P 1445 4505
 F 0 "Y101" H 1445 4605 50  0000 C CNN
-F 1 "Crystal_Small" V 1280 4655 50  0000 C CNN
+F 1 "8Mhz" V 1280 4655 50  0000 C CNN
 F 2 "" H 1445 4505 50  0001 C CNN
-F 3 "" H 1445 4505 50  0000 C CNN
+F 3 "http://www.txccorp.com/download/products/quartz_crystals/2015TXC_9C_32.pdf" H 1445 4505 50  0001 C CNN
+F 4 "Value" H 1445 4505 60  0001 C CNN "Fieldname"
+F 5 "18pF load capacitance" H 1445 4505 60  0001 C CNN "Note"
+F 6 "9C-8.000MEEJ-T" H 1445 4505 60  0001 C CNN "MPN"
 	1    1445 4505
 	0    1    1    0   
 $EndComp
@@ -109,9 +112,10 @@ L C_Small C101
 U 1 1 58D7B957
 P 1210 4405
 F 0 "C101" V 1190 4195 50  0000 L CNN
-F 1 "C_Small" V 1075 4235 50  0000 L CNN
+F 1 "26pF" V 1075 4235 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0805" H 1210 4405 50  0001 C CNN
 F 3 "" H 1210 4405 50  0000 C CNN
+F 4 "Value" H 1210 4405 60  0001 C CNN "Fieldname"
 	1    1210 4405
 	0    1    1    0   
 $EndComp
@@ -120,9 +124,10 @@ L C_Small C102
 U 1 1 58D7BA6C
 P 1210 4605
 F 0 "C102" V 1275 4660 50  0000 L CNN
-F 1 "C_Small" V 1350 4485 50  0000 L CNN
+F 1 "26pF" V 1350 4485 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0805" H 1210 4605 50  0001 C CNN
 F 3 "" H 1210 4605 50  0000 C CNN
+F 4 "Value" H 1210 4605 60  0001 C CNN "Fieldname"
 	1    1210 4605
 	0    1    1    0   
 $EndComp
@@ -218,9 +223,10 @@ U 1 1 58D857AC
 P 2940 1800
 F 0 "L101" V 2825 1750 50  0000 L CNN
 F 1 "40nH" V 3070 1720 50  0000 L CNN
-F 2 "" V 2870 1800 50  0001 C CNN
-F 3 "" H 2940 1800 50  0000 C CNN
+F 2 "Capacitors_SMD:C_0805" V 2870 1800 50  0001 C CNN
+F 3 "http://media.digikey.com/pdf/Data%20Sheets/Steward%20PDFs/Part%20Number%20Guide.pdf" H 2940 1800 50  0001 C CNN
 F 4 "Value" H 2940 1800 60  0001 C CNN "Fieldname"
+F 5 "MI0805K400R-10" V 2940 1800 60  0001 C CNN "MPN"
 	1    2940 1800
 	0    1    -1   0   
 $EndComp
@@ -334,8 +340,8 @@ Connection ~ 1445 1800
 Text Label 1245 1800 0    60   ~ 0
 PWR
 Wire Wire Line
-	7630 3625 7105 3625
-Text Label 7105 3625 0    60   ~ 0
+	9495 3870 8970 3870
+Text Label 8970 3870 0    60   ~ 0
 PWR
 Wire Wire Line
 	3970 3950 4565 3950
@@ -368,7 +374,7 @@ BOOT0
 Wire Wire Line
 	1970 4990 1375 4990
 Text Label 1375 4990 0    60   ~ 0
-RTC_OUT
+PC13
 Wire Wire Line
 	3970 4150 4565 4150
 Text Label 4565 4150 2    60   ~ 0
@@ -417,13 +423,13 @@ Wire Wire Line
 	3970 5180 4565 5180
 Text Label 4565 3280 2    60   ~ 0
 USART1_RX
-Text Notes 1285 1185 0    60   ~ 0
+Text Notes 930  815  0    60   ~ 0
 ARM VDD Filtering Requirements: 100nF on each VDD + 4.7uF\nARM VDDA Filtering Requirements: 10nF + 1uF
 $Comp
-L CONN_01X02 P101
+L CONN_01X02 P104
 U 1 1 58DE50B0
 P 10685 1020
-F 0 "P101" H 10685 1170 50  0000 C CNN
+F 0 "P104" H 10685 1170 50  0000 C CNN
 F 1 "SERIAL" V 10785 1020 50  0000 C CNN
 F 2 "Pin_Headers:Pin_Header_Straight_1x02" H 10685 1020 50  0001 C CNN
 F 3 "" H 10685 1020 50  0000 C CNN
@@ -450,10 +456,10 @@ Wire Notes Line
 Wire Notes Line
 	10855 690  9960 690 
 $Comp
-L CONN_01X04 P103
+L CONN_01X04 P105
 U 1 1 58DE5E3D
 P 10695 1675
-F 0 "P103" H 10695 1925 50  0000 C CNN
+F 0 "P105" H 10695 1925 50  0000 C CNN
 F 1 "SPI" V 10795 1675 50  0000 C CNN
 F 2 "Pin_Headers:Pin_Header_Straight_1x04" H 10695 1675 50  0001 C CNN
 F 3 "" H 10695 1675 50  0000 C CNN
@@ -488,10 +494,10 @@ Wire Notes Line
 Wire Notes Line
 	10860 1260 9885 1260
 $Comp
-L CONN_01X04 P104
+L CONN_01X04 P106
 U 1 1 58DE910A
 P 10700 2485
-F 0 "P104" H 10700 2735 50  0000 C CNN
+F 0 "P106" H 10700 2735 50  0000 C CNN
 F 1 "ADC" V 10800 2485 50  0000 C CNN
 F 2 "Pin_Headers:Pin_Header_Straight_1x04" H 10700 2485 50  0001 C CNN
 F 3 "" H 10700 2485 50  0000 C CNN
@@ -535,102 +541,100 @@ Wire Notes Line
 Wire Notes Line
 	10860 2060 9895 2060
 $Comp
-L CONN_01X02 P102
+L CONN_01X02 P103
 U 1 1 58DE9806
-P 10690 3415
-F 0 "P102" H 10690 3565 50  0000 C CNN
-F 1 "I2C" V 10790 3415 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x02" H 10690 3415 50  0001 C CNN
-F 3 "" H 10690 3415 50  0000 C CNN
-F 4 "Value" H 10690 3415 60  0001 C CNN "Fieldname"
-	1    10690 3415
+P 10665 3215
+F 0 "P103" H 10665 3365 50  0000 C CNN
+F 1 "I2C" V 10765 3215 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02" H 10665 3215 50  0001 C CNN
+F 3 "" H 10665 3215 50  0000 C CNN
+F 4 "Value" H 10665 3215 60  0001 C CNN "Fieldname"
+	1    10665 3215
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	10000 3365 10490 3365
+	9975 3165 10465 3165
 Wire Wire Line
-	10000 3465 10490 3465
-Text Label 10000 3365 0    60   ~ 0
+	9975 3265 10465 3265
+Text Label 9975 3165 0    60   ~ 0
 I2C2_SDA
-Text Label 10000 3465 0    60   ~ 0
+Text Label 9975 3265 0    60   ~ 0
 I2C2_SCL
-Text Notes 9935 3205 0    60   ~ 0
+Text Notes 9910 3005 0    60   ~ 0
 SENSOR I2C HEADER
 Wire Notes Line
-	9900 3095 9900 3560
+	9875 2895 9875 3360
 Wire Notes Line
-	9900 3560 10960 3560
+	9875 3360 10935 3360
 Wire Notes Line
-	10960 3560 10960 3095
+	10935 3360 10935 2895
 Wire Notes Line
-	10960 3095 9895 3095
+	10935 2895 9870 2895
 $Sheet
-S 7630 1165 955  1425
+S 9750 4890 955  1425
 U 58DEA2CA
 F0 "comm" 60
 F1 "comm.sch" 60
-F2 "PWR" I L 7630 1510 60 
-F3 "SWCLK" I L 7630 1645 60 
-F4 "SWDIO" I L 7630 1375 60 
-F5 "NRST" I L 7630 1265 60 
-F6 "TRACE" I L 7630 1770 60 
-F7 "SCL" I L 7630 1895 60 
-F8 "SDA" I L 7630 2025 60 
-F9 "BOOT0" I L 7630 2170 60 
+F2 "PWR" I L 9750 5235 60 
+F3 "SWCLK" I L 9750 5370 60 
+F4 "SWDIO" I L 9750 5100 60 
+F5 "NRST" I L 9750 4990 60 
+F6 "SCL" I L 9750 5620 60 
+F7 "SDA" I L 9750 5750 60 
+F8 "BOOT0" I L 9750 5895 60 
 $EndSheet
 Wire Wire Line
-	7105 3805 7630 3805
+	8970 4050 9495 4050
 Wire Wire Line
-	7630 3990 7110 3990
-Text Label 7105 3805 0    60   ~ 0
+	9495 4235 8975 4235
+Text Label 8970 4050 0    60   ~ 0
 USART2_TX
-Text Label 7110 3990 0    60   ~ 0
+Text Label 8975 4235 0    60   ~ 0
 USART2_RX
-Text Label 7105 3450 0    60   ~ 0
+Text Label 8970 3695 0    60   ~ 0
 NRST
 Wire Wire Line
-	7630 3450 7105 3450
+	9495 3695 8970 3695
 $Comp
 L STM32F030C8 IC101
 U 1 1 58DF544A
 P 2970 4270
 F 0 "IC101" H 2120 6150 50  0000 L BNN
 F 1 "STM32F030C8" H 3370 2320 50  0000 L BNN
-F 2 "Housings_QFP:LQFP-48_7x7mm_Pitch0.5mm" H 2970 4270 50  0000 C CIN
+F 2 "Housings_QFP:LQFP-48_7x7mm_Pitch0.5mm" H 2970 4270 50  0001 C CIN
 F 3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/a4/5d/0b/0e/87/c4/4d/71/DM00088500.pdf/files/DM00088500.pdf/jcr:content/translations/en.DM00088500.pdf" H 2970 4270 50  0001 C CNN
 F 4 "Value" H 2970 4270 60  0001 C CNN "Fieldname"
+F 5 "STM32F030C8T6" H 2970 4270 60  0001 C CNN "MPN"
 	1    2970 4270
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7630 1265 7235 1265
+	9750 4990 9355 4990
 Wire Wire Line
-	7630 1375 7235 1375
+	9750 5100 9355 5100
 Wire Wire Line
-	7630 1510 7240 1510
+	9750 5235 9360 5235
 Wire Wire Line
-	7630 1645 7240 1645
+	9750 5370 9360 5370
 Wire Wire Line
-	7630 1770 7240 1770
+	9360 5620 9750 5620
 Wire Wire Line
-	7240 1895 7630 1895
-Wire Wire Line
-	7630 2025 7245 2025
-Text Label 7240 1510 0    60   ~ 0
+	9750 5750 9365 5750
+Text Label 9360 5235 0    60   ~ 0
 PWR
-Text Label 7235 1375 0    60   ~ 0
+Text Label 9355 5100 0    60   ~ 0
 SWDIO
-Text Label 7240 1645 0    60   ~ 0
+Text Label 9360 5370 0    60   ~ 0
 SWCLK
-Text Label 7245 2025 0    60   ~ 0
+Text Label 9365 5750 0    60   ~ 0
 I2C1_SDA
-Text Label 7240 1895 0    60   ~ 0
+Text Label 9360 5620 0    60   ~ 0
 I2C1_SCL
-Text Label 7235 1265 0    60   ~ 0
+Text Label 9355 4990 0    60   ~ 0
 NRST
 Wire Wire Line
-	7630 2170 7255 2170
-Text Label 7255 2170 0    60   ~ 0
+	9750 5895 9375 5895
+Text Label 9375 5895 0    60   ~ 0
 BOOT0
 Text Notes 4625 5120 0    60   ~ 0
 Note: Change of pins
@@ -644,4 +648,212 @@ Text Notes 4730 3330 0    60   ~ 0
 Note: Change of pins
 Text Notes 4730 3130 0    60   ~ 0
 Note: Change of pins
+$Comp
+L CONN_01X11 P102
+U 1 1 58E1E13C
+P 7980 1965
+F 0 "P102" H 7980 2565 50  0000 C CNN
+F 1 "GPIO1" V 8080 1965 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x11" H 7980 1965 50  0001 C CNN
+F 3 "" H 7980 1965 50  0000 C CNN
+F 4 "Value" H 7980 1965 60  0001 C CNN "Fieldname"
+	1    7980 1965
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3970 3080 4560 3080
+Wire Wire Line
+	3970 3180 4565 3180
+Text Label 4560 3080 2    60   ~ 0
+PA12
+Text Label 4565 3180 2    60   ~ 0
+PA11
+Wire Wire Line
+	3970 3560 4565 3560
+Wire Wire Line
+	3970 3650 4565 3650
+Wire Wire Line
+	3970 3750 4565 3750
+Wire Wire Line
+	3970 3850 4565 3850
+Text Label 4565 3560 2    60   ~ 0
+PA7
+Text Label 4565 3650 2    60   ~ 0
+PA6
+Text Label 4565 3750 2    60   ~ 0
+PA5
+Text Label 4565 3850 2    60   ~ 0
+PA4
+Wire Wire Line
+	3970 4250 4565 4250
+Text Label 4565 4250 2    60   ~ 0
+PA0
+Wire Wire Line
+	3970 4680 4565 4680
+Text Label 4565 4680 2    60   ~ 0
+PB2
+Wire Wire Line
+	3970 5280 4555 5280
+Wire Wire Line
+	3970 5380 4555 5380
+Wire Wire Line
+	3970 5480 4555 5480
+Wire Wire Line
+	3970 5580 4555 5580
+Text Label 4555 5280 2    60   ~ 0
+PB8
+Text Label 4555 5380 2    60   ~ 0
+PB9
+Text Label 4555 5480 2    60   ~ 0
+PB10
+Text Label 4555 5580 2    60   ~ 0
+PB11
+Wire Wire Line
+	3970 5690 4555 5690
+Wire Wire Line
+	3970 5800 4555 5800
+Wire Wire Line
+	3970 5910 4555 5910
+Wire Wire Line
+	3970 6030 4555 6030
+Text Label 4555 5690 2    60   ~ 0
+PB12
+Text Label 4555 5800 2    60   ~ 0
+PB13
+Text Label 4555 5910 2    60   ~ 0
+PB14
+Text Label 4555 6030 2    60   ~ 0
+PB15
+Wire Wire Line
+	1970 3510 1375 3510
+Wire Wire Line
+	1970 3610 1375 3610
+Text Label 1375 3510 0    60   ~ 0
+PC14
+Text Label 1375 3610 0    60   ~ 0
+PC15
+Wire Wire Line
+	7780 1465 7255 1465
+Wire Wire Line
+	7780 1565 7255 1565
+Wire Wire Line
+	7780 1665 7255 1665
+Wire Wire Line
+	7780 1765 7255 1765
+Wire Wire Line
+	7780 1865 7255 1865
+Wire Wire Line
+	7780 1965 7255 1965
+Wire Wire Line
+	7780 2065 7255 2065
+Wire Wire Line
+	7780 2165 7255 2165
+Wire Wire Line
+	7780 2265 7255 2265
+Wire Wire Line
+	7780 2365 7255 2365
+Wire Wire Line
+	7780 2465 7255 2465
+$Comp
+L CONN_01X11 P101
+U 1 1 58E22A63
+P 8000 3365
+F 0 "P101" H 8000 3965 50  0000 C CNN
+F 1 "GPIO2" V 8100 3365 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x11" H 8000 3365 50  0001 C CNN
+F 3 "" H 8000 3365 50  0000 C CNN
+F 4 "Value" H 8000 3365 60  0001 C CNN "Fieldname"
+	1    8000 3365
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7800 2865 7275 2865
+Wire Wire Line
+	7800 2965 7275 2965
+Wire Wire Line
+	7800 3065 7275 3065
+Wire Wire Line
+	7800 3165 7275 3165
+Wire Wire Line
+	7800 3265 7275 3265
+Wire Wire Line
+	7800 3365 7275 3365
+Wire Wire Line
+	7800 3465 7275 3465
+Wire Wire Line
+	7800 3565 7275 3565
+Wire Wire Line
+	7800 3665 7275 3665
+Wire Wire Line
+	7800 3765 7275 3765
+Wire Wire Line
+	7800 3865 7275 3865
+Text Label 7255 1565 0    60   ~ 0
+PC14
+Text Label 7255 1465 0    60   ~ 0
+PC13
+Text Label 7255 1665 0    60   ~ 0
+PC15
+Text Label 7255 1765 0    60   ~ 0
+PA0
+Text Label 7255 1865 0    60   ~ 0
+PA4
+Text Label 7255 1965 0    60   ~ 0
+PA5
+Text Label 7255 2065 0    60   ~ 0
+PA6
+Text Label 7255 2165 0    60   ~ 0
+PA7
+Text Label 7255 2365 0    60   ~ 0
+PA11
+Text Label 7275 2865 0    60   ~ 0
+PA12
+Text Label 7275 2965 0    60   ~ 0
+PB2
+Text Label 7275 3065 0    60   ~ 0
+PB8
+Text Label 7275 3165 0    60   ~ 0
+PB9
+Text Label 7275 3265 0    60   ~ 0
+PB10
+Text Label 7275 3365 0    60   ~ 0
+PB11
+Text Label 7275 3465 0    60   ~ 0
+PB12
+Text Label 7275 3565 0    60   ~ 0
+PB13
+Text Label 7275 3665 0    60   ~ 0
+PB14
+Text Label 7275 3765 0    60   ~ 0
+PB15
+$Comp
+L GND #PWR010
+U 1 1 58E27584
+P 7255 2465
+F 0 "#PWR010" H 7255 2215 50  0001 C CNN
+F 1 "GND" H 7255 2315 50  0000 C CNN
+F 2 "" H 7255 2465 50  0000 C CNN
+F 3 "" H 7255 2465 50  0000 C CNN
+	1    7255 2465
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR011
+U 1 1 58E27B35
+P 7275 3865
+F 0 "#PWR011" H 7275 3615 50  0001 C CNN
+F 1 "GND" H 7275 3715 50  0000 C CNN
+F 2 "" H 7275 3865 50  0000 C CNN
+F 3 "" H 7275 3865 50  0000 C CNN
+	1    7275 3865
+	1    0    0    -1  
+$EndComp
+Text Label 7255 2265 0    60   ~ 0
+MCO
+Text Notes 2870 1600 0    60   ~ 0
+TODO: make real footprint for the inductor
+Text Notes 2865 1490 0    60   ~ 0
+TODO: check footprints for large value caps
+Text Notes 2865 1385 0    60   ~ 0
+TODO: Check SEED connector parts
 $EndSCHEMATC
