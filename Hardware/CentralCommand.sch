@@ -62,7 +62,7 @@ U 1 1 58D7B5C0
 P 3570 1900
 F 0 "C107" H 3580 1970 50  0000 L CNN
 F 1 "10nF" H 3580 1820 50  0000 L CNN
-F 2 "Capacitors_SMD:C_1206" H 3570 1900 50  0001 C CNN
+F 2 "Capacitors_SMD:C_0805" H 3570 1900 50  0001 C CNN
 F 3 "" H 3570 1900 50  0000 C CNN
 F 4 "Value" H 3570 1900 60  0001 C CNN "Fieldname"
 	1    3570 1900
@@ -189,8 +189,6 @@ Wire Wire Line
 Wire Wire Line
 	905  4550 1110 4550
 Connection ~ 1110 4550
-Text Notes 1080 6965 0    60   ~ 0
-RESET cap and switch - look in datasheet for example
 $Comp
 L C_Small C108
 U 1 1 58D85374
