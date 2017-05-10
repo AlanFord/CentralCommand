@@ -520,9 +520,9 @@ Wire Wire Line
 	8970 4050 9495 4050
 Wire Wire Line
 	9495 4235 8975 4235
-Text Label 8970 4050 0    60   ~ 0
-USART2_TX
 Text Label 8975 4235 0    60   ~ 0
+USART2_TX
+Text Label 8970 4050 0    60   ~ 0
 USART2_RX
 Text Label 8970 3695 0    60   ~ 0
 NRST
@@ -739,8 +739,6 @@ Text Notes 2870 1600 0    60   ~ 0
 TODO: make real footprint for the inductor
 Text Notes 2865 1490 0    60   ~ 0
 TODO: check footprints for large value caps
-Text Notes 2865 1385 0    60   ~ 0
-TODO: Check SEED connector parts
 $Comp
 L CONN_01X04 P101
 U 1 1 58E544AB
