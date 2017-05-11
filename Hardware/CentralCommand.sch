@@ -765,7 +765,7 @@ Text Label 7265 4965 0    60   ~ 0
 GND
 Text Label 2950 6485 0    60   ~ 0
 GND
-Text Label 7255 1265 0    60   ~ 0
+Text Label 7255 1365 0    60   ~ 0
 GND
 Text Label 10225 3100 2    60   ~ 0
 GND
@@ -837,7 +837,7 @@ F 4 "Value" H 7980 1815 60  0001 C CNN "Fieldname"
 $EndComp
 Wire Wire Line
 	7780 1365 7255 1365
-Text Label 7255 1365 0    60   ~ 0
+Text Label 7255 1265 0    60   ~ 0
 PWR
 $Comp
 L CONN_01X12 P103
@@ -853,10 +853,55 @@ F 4 "Value" H 8000 3215 60  0001 C CNN "Fieldname"
 $EndComp
 Wire Wire Line
 	7800 2665 7275 2665
-Text Label 7275 2665 0    60   ~ 0
+Text Label 7275 2765 0    60   ~ 0
 GND
 Wire Wire Line
 	7800 2765 7275 2765
-Text Label 7275 2765 0    60   ~ 0
+Text Label 7275 2665 0    60   ~ 0
 PWR
+$Comp
+L R_Small R101
+U 1 1 5914C21D
+P 6240 3985
+F 0 "R101" H 6270 4005 50  0000 L CNN
+F 1 "270" H 6270 3945 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805" H 6240 3985 50  0001 C CNN
+F 3 "" H 6240 3985 50  0000 C CNN
+F 4 "Value" H 6240 3985 60  0001 C CNN "Fieldname"
+	1    6240 3985
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED D101
+U 1 1 5914C488
+P 6240 4340
+F 0 "D101" H 6240 4440 50  0000 C CNN
+F 1 "RED LED" H 6240 4240 50  0000 C CNN
+F 2 "LEDs:LED_0805" H 6240 4340 50  0001 C CNN
+F 3 "" H 6240 4340 50  0000 C CNN
+F 4 "Value" H 6240 4340 60  0001 C CNN "Fieldname"
+	1    6240 4340
+	0    -1   -1   0   
+$EndComp
+$Comp
+L GND #PWR09
+U 1 1 5914C558
+P 6240 4620
+F 0 "#PWR09" H 6240 4370 50  0001 C CNN
+F 1 "GND" H 6240 4470 50  0000 C CNN
+F 2 "" H 6240 4620 50  0000 C CNN
+F 3 "" H 6240 4620 50  0000 C CNN
+	1    6240 4620
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6240 4085 6240 4190
+Wire Wire Line
+	6240 4490 6240 4620
+Wire Wire Line
+	6240 3885 6240 3770
+Wire Wire Line
+	6240 3770 6500 3770
+Text Label 6500 3770 2    60   ~ 0
+PB15
 $EndSCHEMATC
