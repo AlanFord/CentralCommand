@@ -64,7 +64,7 @@ U 1 1 58D7B3F4
 P 6340 4615
 F 0 "IC201" H 5790 5865 50  0000 C CNN
 F 1 "FT232RQ" H 6790 3905 50  0000 C CNN
-F 2 "Housings_DFN_QFN:QFN-32-1EP_5x5mm_Pitch0.5mm" H 6340 4615 50  0001 C CIN
+F 2 "CentralCommand:FT232RQ" H 6340 4615 50  0001 C CIN
 F 3 "http://www.ftdichip.com/Support/Documents/DataSheets/ICs/DS_FT232R.pdf" H 6340 4615 50  0001 C CNN
 F 4 "Value" H 6340 4615 60  0001 C CNN "Fieldname"
 	1    6340 4615
