@@ -709,29 +709,29 @@ Text Label 7255 2065 0    60   ~ 0
 PA6
 Text Label 7255 2165 0    60   ~ 0
 PA7
-Text Label 7255 2365 0    60   ~ 0
-PA11
-Text Label 7275 2865 0    60   ~ 0
-PA12
-Text Label 7275 2965 0    60   ~ 0
-PB2
-Text Label 7275 3065 0    60   ~ 0
-PB8
-Text Label 7275 3165 0    60   ~ 0
-PB9
-Text Label 7275 3265 0    60   ~ 0
-PB10
-Text Label 7275 3365 0    60   ~ 0
-PB11
-Text Label 7275 3465 0    60   ~ 0
-PB12
-Text Label 7275 3565 0    60   ~ 0
-PB13
 Text Label 7275 3665 0    60   ~ 0
-PB14
+PA11
 Text Label 7275 3765 0    60   ~ 0
-PB15
+PA12
 Text Label 7255 2265 0    60   ~ 0
+PB2
+Text Label 7275 3365 0    60   ~ 0
+PB8
+Text Label 7275 3465 0    60   ~ 0
+PB9
+Text Label 7255 2365 0    60   ~ 0
+PB10
+Text Label 7275 2865 0    60   ~ 0
+PB11
+Text Label 7275 2965 0    60   ~ 0
+PB12
+Text Label 7275 3065 0    60   ~ 0
+PB13
+Text Label 7275 3165 0    60   ~ 0
+PB14
+Text Label 7275 3265 0    60   ~ 0
+PB15
+Text Label 7275 3565 0    60   ~ 0
 MCO
 Text Notes 2870 1600 0    60   ~ 0
 TODO: make real footprint for the inductor
@@ -903,5 +903,5 @@ Wire Wire Line
 Wire Wire Line
 	6240 3770 6500 3770
 Text Label 6500 3770 2    60   ~ 0
-PB15
+PB10
 $EndSCHEMATC
