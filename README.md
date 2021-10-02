@@ -19,3 +19,7 @@ connector during programming, the trace between the reset button, SW301, and
 the FTD232RQ USB interface must be cut.  Without cutting this trace the mcu reset
 that occurs during programming will simultaneously reset the FTD232RQ device,
 momentarily powering down the entire board.
+
+**UPDATE #2:**  The firmware folders and files have been restructured
+and updated to support the use of the STM32CubeIDE.  To use the IDE,
+simply create a workspace and import this project.
